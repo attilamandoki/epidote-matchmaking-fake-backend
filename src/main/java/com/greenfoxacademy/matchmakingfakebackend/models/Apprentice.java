@@ -16,6 +16,8 @@ public class Apprentice extends User {
   private String cohortClass;
   @Column(name = "is_hungarian_speaker")
   private boolean isHungarianSpeaker;
+  @Column (name = "slack_channel_id")
+  private String slackChannelId;
 
   public Apprentice() {
     super();
@@ -45,12 +47,20 @@ public class Apprentice extends User {
     this.cohort = cohort;
   }
 
-  public boolean isHungarianSpeaker() {
+  public boolean getIsHungarianSpeaker() {
     return isHungarianSpeaker;
   }
 
   public void setHungarianSpeaker(boolean hungarianSpeaker) {
     isHungarianSpeaker = hungarianSpeaker;
+  }
+
+  public String getSlackChannelId() {
+    return slackChannelId;
+  }
+
+  public void setSlackChannelId(String slackChannelId) {
+    this.slackChannelId = slackChannelId;
   }
 
   public String getCohortClass() {
